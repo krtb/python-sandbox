@@ -10,5 +10,5 @@ class User:
         self.id = id
         
     
-    def __repr__(self):
+    def __repr__(self): #without it would only get type and memory address
         return "<User {}>".format(self.email) # allows your to print the user object with less code
