@@ -4,4 +4,7 @@ class User:
     # self = currently bound object
     def __init__(self, email, first_name, last_name, id): # add args/props of user object, id goes last
         # init method = allows for definition of props stores in each object
-        super().__init__(*args, **kwargs)
+        self.email = email
+        self.first_name = first_name # set props passed into class to be a property of this class
+        self.last_name = last_name
+        self.id = id
