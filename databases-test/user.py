@@ -8,3 +8,7 @@ class User:
         self.first_name = first_name # set props passed into class to be a property of this class
         self.last_name = last_name
         self.id = id
+        
+    
+    def __repr__(self):
+        return "<User {}>".format(self.email) # allows your to print the user object with less code
