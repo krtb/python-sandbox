@@ -15,11 +15,9 @@ class User:
         return "<User {}>".format(self.email) # allows your to print the user object with less code
 
     def save_to_db(self): # add method to save user to database
-        connection = psycopg2.connect(user='kurt', password='password', database='learning_python', host='localhost')
+        connection = psycopg2.connect(user='postgres', password='password', database='learning_python', host='localhost')
         #cursor, retrieves data and reads row by row, have to open this
         with connection.cursor() as cursor:
             cursor.execute('INSERT INTO users (email, first_name, last_name) VALUES (%s,%s,%s)',
                 (self.email, self.first_name, self.last_name)
             ) #does almost the same thing as the format method
-        connection.commit()
-        connection.close()
