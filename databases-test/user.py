@@ -31,7 +31,11 @@ class User:
     @classmethod # cls = currently bound class, makes it user in this instancs
     def load_from_db_by_email(cls, email):
         #TODO: step 1 - OPEN A CONNECTION TO DB
+<<<<<<< HEAD
         with psycopg2.connect(user='kurt', password='password', database='learning_python', host='learning_python') as connection:
+=======
+        with psycopg2.connect(user='kurt', password='password', database='learning_python', host='localhost') as connection:
+>>>>>>> 1e7148e4afebe7f9b85a8ce279eb6860e862a4bc
             #TODO: step 2 - create a cursor
             with connection.cursor() as cursor:
                 #TODO: step 3 - EXECUTE CODE
