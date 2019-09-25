@@ -1,5 +1,5 @@
 import psycopg2
-from dotenv import USER, PASSWORD, DATA_BASE, HOST
+from secrets import *
 
 class User:
     #pass = if we didn't want our user to do anything
